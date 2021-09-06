@@ -7,193 +7,136 @@
                         <div class="row">
                             <div class="col-lg-9">
                                 <div class="row">
-                                    <div class="col-sm-6">
-                                        <label>First Name *</label>
+                                    <div class="col-sm-8">
+                                        <label>Phone Number</label>
                                         <input
                                             type="text"
                                             class="form-control"
                                             required
                                         />
                                     </div>
-                                    <!-- End .col-sm-6 -->
-
-                                    <div class="col-sm-6">
-                                        <label>Last Name *</label>
+                                    <div class="col-sm-4">
+                                        <label>Code verify</label>
                                         <input
                                             type="text"
                                             class="form-control"
                                             required
                                         />
                                     </div>
-                                    <!-- End .col-sm-6 -->
                                 </div>
-                                <!-- End .row -->
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label>Name</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Surname</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>LastName</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <label>Region</label>
+                                        <select
+                                            type="text"
+                                            class="form-control"
+                                        >
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Price</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <label>Categories</label>
+                                <select type="text" class="form-control">
+                                    <option value=""></option>
+                                </select>
 
-                                <label>Company Name (Optional)</label>
-                                <input type="text" class="form-control" />
-
-                                <label>Country *</label>
+                                <label>Title</label>
                                 <input
                                     type="text"
                                     class="form-control"
                                     required
                                 />
 
-                                <label>Street address *</label>
-                                <input
-                                    type="text"
+                                <label>text</label>
+                                <textarea
                                     class="form-control"
                                     placeholder="House number and Street name"
                                     required
-                                />
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    placeholder="Appartments, suite, unit etc ..."
-                                    required
-                                />
-
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label>Town / City *</label>
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            required
-                                        />
-                                    </div>
-                                    <!-- End .col-sm-6 -->
-
-                                    <div class="col-sm-6">
-                                        <label>State / County *</label>
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            required
-                                        />
-                                    </div>
-                                    <!-- End .col-sm-6 -->
-                                </div>
-                                <!-- End .row -->
-
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label>Postcode / ZIP *</label>
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            required
-                                        />
-                                    </div>
-                                    <!-- End .col-sm-6 -->
-
-                                    <div class="col-sm-6">
-                                        <label>Phone *</label>
-                                        <input
-                                            type="tel"
-                                            class="form-control"
-                                            required
-                                        />
-                                    </div>
-                                    <!-- End .col-sm-6 -->
-                                </div>
-                                <!-- End .row -->
-
-                                <label>Email address *</label>
-                                <input
-                                    type="email"
-                                    class="form-control"
-                                    required
-                                />
-
-                                <div class="custom-control custom-checkbox">
-                                    <input
-                                        type="checkbox"
-                                        class="custom-control-input"
-                                        id="checkout-create-acc"
-                                    />
-                                    <label
-                                        class="custom-control-label"
-                                        for="checkout-create-acc"
-                                        >Create an account?</label
-                                    >
-                                </div>
-                                <!-- End .custom-checkbox -->
-
-                                <div class="custom-control custom-checkbox">
-                                    <input
-                                        type="checkbox"
-                                        class="custom-control-input"
-                                        id="checkout-diff-address"
-                                    />
-                                    <label
-                                        class="custom-control-label"
-                                        for="checkout-diff-address"
-                                        >Ship to a different address?</label
-                                    >
-                                </div>
-                                <!-- End .custom-checkbox -->
-
-                                <label>Order notes (optional)</label>
-                                <textarea
-                                    class="form-control"
-                                    cols="30"
-                                    rows="4"
-                                    placeholder="Notes about your order, e.g. special notes for delivery"
                                 ></textarea>
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label>image</label>
+                                        <div
+                                            class="file-uploader"
+                                            title="upload image post"
+                                        >
+                                            <input
+                                                type="file"
+                                                name=""
+                                                id="btn-imageuploader"
+                                                class="btn"
+                                            />
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="40"
+                                                height="40"
+                                                fill="currentColor"
+                                                class="bi bi-cloud-plus"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5z"
+                                                />
+                                                <path
+                                                    d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- End .col-lg-9 -->
                             <aside class="col-lg-3">
                                 <div class="summary">
-                                    <h3 class="summary-title">Your Order</h3>
-                                    <!-- End .summary-title -->
-
-                                    <table class="table table-summary">
-                                        <thead>
-                                            <tr>
-                                                <th>Product</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <a href="#"
-                                                        >Beige knitted elastic
-                                                        runner shoes</a
-                                                    >
-                                                </td>
-                                                <td>$84.00</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <a href="#"
-                                                        >Blue utility pinafore
-                                                        denimdress</a
-                                                    >
-                                                </td>
-                                                <td>$76,00</td>
-                                            </tr>
-                                            <tr class="summary-subtotal">
-                                                <td>Subtotal:</td>
-                                                <td>$160.00</td>
-                                            </tr>
-                                            <!-- End .summary-subtotal -->
-                                            <tr>
-                                                <td>Shipping:</td>
-                                                <td>Free shipping</td>
-                                            </tr>
-                                            <tr class="summary-total">
-                                                <td>Total:</td>
-                                                <td>$160.00</td>
-                                            </tr>
-                                            <!-- End .summary-total -->
-                                        </tbody>
-                                    </table>
-                                    <!-- End .table table-summary -->
-
+                                    <div
+                                        class="custom-control custom-checkbox mb-3"
+                                    >
+                                        <input
+                                            type="checkbox"
+                                            class="custom-control-input"
+                                            id="checkout-create-acc"
+                                        />
+                                        <label
+                                            class="custom-control-label"
+                                            for="checkout-create-acc"
+                                            >ТОП</label
+                                        >
+                                    </div>
                                     <div
                                         class="accordion-summary"
                                         id="accordion-payment"
@@ -211,11 +154,10 @@
                                                         aria-expanded="true"
                                                         aria-controls="collapse-1"
                                                     >
-                                                        Direct bank transfer
+                                                        Снятие денег
                                                     </a>
                                                 </h2>
                                             </div>
-                                            <!-- End .card-header -->
                                             <div
                                                 id="collapse-1"
                                                 class="collapse show"
@@ -231,11 +173,8 @@
                                                     until the funds have cleared
                                                     in our account.
                                                 </div>
-                                                <!-- End .card-body -->
                                             </div>
-                                            <!-- End .collapse -->
                                         </div>
-                                        <!-- End .card -->
 
                                         <div class="card">
                                             <div
@@ -251,11 +190,10 @@
                                                         aria-expanded="false"
                                                         aria-controls="collapse-2"
                                                     >
-                                                        Check payments
+                                                        С карты
                                                     </a>
                                                 </h2>
                                             </div>
-                                            <!-- End .card-header -->
                                             <div
                                                 id="collapse-2"
                                                 class="collapse"
@@ -269,12 +207,8 @@
                                                     volutpat mattis eros. Nullam
                                                     malesuada erat ut turpis.
                                                 </div>
-                                                <!-- End .card-body -->
                                             </div>
-                                            <!-- End .collapse -->
                                         </div>
-                                        <!-- End .card -->
-
                                         <div class="card">
                                             <div
                                                 class="card-header"
@@ -289,11 +223,10 @@
                                                         aria-expanded="false"
                                                         aria-controls="collapse-3"
                                                     >
-                                                        Cash on delivery
+                                                        С номера телефона
                                                     </a>
                                                 </h2>
                                             </div>
-                                            <!-- End .card-header -->
                                             <div
                                                 id="collapse-3"
                                                 class="collapse"
@@ -308,11 +241,8 @@
                                                     Quisque volutpat mattis
                                                     eros.
                                                 </div>
-                                                <!-- End .card-body -->
                                             </div>
-                                            <!-- End .collapse -->
                                         </div>
-                                        <!-- End .card -->
 
                                         <div class="card">
                                             <div
@@ -328,16 +258,10 @@
                                                         aria-expanded="false"
                                                         aria-controls="collapse-4"
                                                     >
-                                                        PayPal
-                                                        <small
-                                                            class="float-right paypal-link"
-                                                            >What is
-                                                            PayPal?</small
-                                                        >
+                                                        Наличие
                                                     </a>
                                                 </h2>
                                             </div>
-                                            <!-- End .card-header -->
                                             <div
                                                 id="collapse-4"
                                                 class="collapse"
@@ -352,12 +276,8 @@
                                                     Donec nec justo eget felis
                                                     facilisis fermentum.
                                                 </div>
-                                                <!-- End .card-body -->
                                             </div>
-                                            <!-- End .collapse -->
                                         </div>
-                                        <!-- End .card -->
-
                                         <div class="card">
                                             <div
                                                 class="card-header"
@@ -372,15 +292,10 @@
                                                         aria-expanded="false"
                                                         aria-controls="collapse-5"
                                                     >
-                                                        Credit Card (Stripe)
-                                                        <img
-                                                            src="assets/images/payments-summary.png"
-                                                            alt="payments cards"
-                                                        />
+                                                        С кашелёк
                                                     </a>
                                                 </h2>
                                             </div>
-                                            <!-- End .card-header -->
                                             <div
                                                 id="collapse-5"
                                                 class="collapse"
@@ -396,17 +311,12 @@
                                                     volutpat mattis eros. Lorem
                                                     ipsum dolor sit ame.
                                                 </div>
-                                                <!-- End .card-body -->
                                             </div>
-                                            <!-- End .collapse -->
                                         </div>
-                                        <!-- End .card -->
                                     </div>
-                                    <!-- End .accordion -->
-
                                     <button
                                         type="submit"
-                                        class="btn btn-outline-primary-2 btn-order btn-block"
+                                        class="btn btn-outline-primary-2 btn-order btn-block mt-3"
                                     >
                                         <span class="btn-text"
                                             >Place Order</span
@@ -416,17 +326,37 @@
                                         >
                                     </button>
                                 </div>
-                                <!-- End .summary -->
                             </aside>
-                            <!-- End .col-lg-3 -->
                         </div>
-                        <!-- End .row -->
                     </form>
                 </div>
-                <!-- End .container -->
             </div>
-            <!-- End .checkout -->
         </div>
-        <!-- End .page-content -->
     </main>
 </template>
+<style scoped>
+.file-uploader {
+    width: 200px;
+    height: 100px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    color: #b4a4a4;
+    cursor: pointer;
+    position: relative;
+}
+
+#btn-imageuploader {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+}
+</style>

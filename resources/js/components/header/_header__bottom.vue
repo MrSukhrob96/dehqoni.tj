@@ -58,7 +58,7 @@
                     </router-link>
                 </div>
 
-                <!-- <div class="wishlist d-none d-lg-flex">
+                <div class="wishlist d-none d-lg-flex">
                     <router-link :to="{ name: 'wishlist' }" title="Wishlist">
                         <div class="icon">
                             <i class="icon-heart-o"></i>
@@ -66,7 +66,7 @@
                         </div>
                         <p>Wishlist</p>
                     </router-link>
-                </div> -->
+                </div>
 
                 <div class="ml-4">
                     <router-link

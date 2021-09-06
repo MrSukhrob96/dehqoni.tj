@@ -6,12 +6,28 @@
                 <a href="#" class="sidebar-filter-clear">Clean All</a>
             </div>
 
-            <filter-item-component :items="[{}, {}, {}, {}]" :widget="1" cat="category">
+            <filter-item-component
+                :items="[{}, {}, {}, {}]"
+                :widget="1"
+                cat="category"
+            >
                 Categories
             </filter-item-component>
 
-            <filter-item-component :items="[{}, {}, {}, {}]" :widget="2" cat="brand">
+            <filter-item-component
+                :items="[{}, {}, {}, {}]"
+                :widget="2"
+                cat="brand"
+            >
                 Brands
+            </filter-item-component>
+
+            <filter-item-component
+                :items="[{}, {}, {}, {}]"
+                :widget="3"
+                cat="brand"
+            >
+                Regions
             </filter-item-component>
 
             <div class="widget widget-collapsible">
@@ -26,29 +42,27 @@
                         Price
                     </a>
                 </h3>
-                <!-- End .widget-title -->
-
                 <div class="collapse show" id="widget-5">
                     <div class="widget-body">
-                        <div class="filter-price">
-                            <div class="filter-price-text">
-                                Price Range:
-                                <span id="filter-price-range"></span>
-                            </div>
-                            <!-- End .filter-price-text -->
-
-                            <div id="price-slider"></div>
-                            <!-- End #price-slider -->
+                        <div class="filter-price d-flex">
+                            <input
+                                type="number"
+                                id="disabledTextInput"
+                                class="form-control"
+                                placeholder="от"
+                            />
+                            <span>&nbsp;:&nbsp;</span>
+                            <input
+                                type="number"
+                                id="disabledTextInput"
+                                class="form-control"
+                                placeholder="до"
+                            />
                         </div>
-                        <!-- End .filter-price -->
                     </div>
-                    <!-- End .widget-body -->
                 </div>
-                <!-- End .collapse -->
             </div>
-            <!-- End .widget -->
         </div>
-        <!-- End .sidebar sidebar-shop -->
     </aside>
 </template>
 <script>

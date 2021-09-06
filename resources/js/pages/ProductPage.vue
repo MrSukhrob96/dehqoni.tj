@@ -12,7 +12,9 @@
                                     <figure class="product-main-image">
                                         <img
                                             id="product-zoom"
-                                            :src="`${host}assets/images/products/single/1.jpg`"
+                                            :src="
+                                                `${host}assets/images/products/single/1.jpg`
+                                            "
                                             data-zoom-image="assets/images/products/single/1-big.jpg"
                                             alt="product image"
                                         />
@@ -31,13 +33,15 @@
                                         class="product-image-gallery"
                                     >
                                         <router-link
-                                            class="product-gallery-item active"
-                                            to="#"
+                                            class="product-gallery-item"
+                                            to=""
                                             data-image="assets/images/products/single/1.jpg"
                                             data-zoom-image="assets/images/products/single/1-big.jpg"
                                         >
                                             <img
-                                                :src="`${host}assets/images/products/single/1-small.jpg`"
+                                                :src="
+                                                    `${host}assets/images/products/single/1-small.jpg`
+                                                "
                                                 alt="product side"
                                             />
                                         </router-link>

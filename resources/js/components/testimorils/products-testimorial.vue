@@ -14,11 +14,11 @@
                 :nav="false"
             >
                 <article
-                    class="entry"
+                    class="entry shadow-sm"
                     v-for="product in products"
                     :key="product.id"
                 >
-                    <figure class="entry-media">
+                    <figure class="entry-media"  style="background: #fff;">
                         <router-link
                             :to="{ name: 'product', params: { id: 1 } }"
                         >
@@ -27,6 +27,8 @@
                                     `${host}assets/images/demos/demo-10/blog/post-1.jpg`
                                 "
                                 alt="image desc"
+                                style="border-radius: 5px;"
+                                class="shadow"
                             />
                         </router-link>
                     </figure>
