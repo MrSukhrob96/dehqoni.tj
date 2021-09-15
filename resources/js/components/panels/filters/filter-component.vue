@@ -25,7 +25,7 @@
             <filter-item-component
                 :items="[{}, {}, {}, {}]"
                 :widget="3"
-                cat="brand"
+                cat="region"
             >
                 Regions
             </filter-item-component>
@@ -50,6 +50,7 @@
                                 id="disabledTextInput"
                                 class="form-control"
                                 placeholder="от"
+                                min="0"
                             />
                             <span>&nbsp;:&nbsp;</span>
                             <input
@@ -57,6 +58,7 @@
                                 id="disabledTextInput"
                                 class="form-control"
                                 placeholder="до"
+                                min="0"
                             />
                         </div>
                     </div>

@@ -2,7 +2,7 @@
     <div class="product product-7 text-center">
         <figure class="product-media">
             <span class="product-label label-new">New</span>
-            <router-link :to="{ name: 'product', params: { id: 1 } }">
+            <router-link :to="{ name: 'product', params: { id: 1 } }" class="">
                 <img
                     :src="`${host}assets/images/products/product-4.jpg`"
                     alt="Product image"

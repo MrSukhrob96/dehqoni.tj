@@ -338,7 +338,7 @@
 .file-uploader {
     width: 200px;
     height: 100px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+    border: 1px dashed rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -346,6 +346,7 @@
     color: #b4a4a4;
     cursor: pointer;
     position: relative;
+    border-radius: 5px;
 }
 
 #btn-imageuploader {

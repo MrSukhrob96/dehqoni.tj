@@ -2140,6 +2140,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -7480,7 +7482,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.file-uploader[data-v-9254c40a] {\r\n    width: 200px;\r\n    height: 100px;\r\n    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: #f9f9f9;\r\n    color: #b4a4a4;\r\n    cursor: pointer;\r\n    position: relative;\n}\n#btn-imageuploader[data-v-9254c40a] {\r\n    border: none;\r\n    background-color: transparent;\r\n    outline: none;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    bottom: 0;\r\n    right: 0;\r\n    opacity: 0;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.file-uploader[data-v-9254c40a] {\r\n    width: 200px;\r\n    height: 100px;\r\n    border: 1px dashed rgba(0, 0, 0, 0.05);\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: #f9f9f9;\r\n    color: #b4a4a4;\r\n    cursor: pointer;\r\n    position: relative;\r\n    border-radius: 5px;\n}\n#btn-imageuploader[data-v-9254c40a] {\r\n    border: none;\r\n    background-color: transparent;\r\n    outline: none;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    bottom: 0;\r\n    right: 0;\r\n    opacity: 0;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -42285,77 +42287,79 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "header-right" }, [
-        _c(
-          "div",
-          { staticClass: "dropdown compare-dropdown d-none d-lg-flex" },
-          [
-            _c(
-              "router-link",
-              {
-                staticClass: "dropdown-toggle",
-                attrs: {
-                  to: { name: "auth-login" },
-                  role: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "true",
-                  "aria-expanded": "false",
-                  "data-display": "static",
-                  title: "Compare Products",
-                  "aria-label": "Compare Products"
-                }
-              },
-              [
-                _c("div", { staticClass: "icon" }, [
-                  _c("i", { staticClass: "icon-user" })
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("Кабинет")])
-              ]
-            )
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "wishlist d-none d-lg-flex" },
-          [
-            _c(
-              "router-link",
-              { attrs: { to: { name: "wishlist" }, title: "Wishlist" } },
-              [
-                _c("div", { staticClass: "icon" }, [
-                  _c("i", { staticClass: "icon-heart-o" }),
+        _c("div", { staticClass: "d-flex" }, [
+          _c(
+            "div",
+            { staticClass: "dropdown compare-dropdown d-none d-lg-flex" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "dropdown-toggle",
+                  attrs: {
+                    to: { name: "auth-login" },
+                    role: "button",
+                    "data-toggle": "dropdown",
+                    "aria-haspopup": "true",
+                    "aria-expanded": "false",
+                    "data-display": "static",
+                    title: "Compare Products",
+                    "aria-label": "Compare Products"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "icon" }, [
+                    _c("i", { staticClass: "icon-user" })
+                  ]),
                   _vm._v(" "),
-                  _c("span", { staticClass: "wishlist-count badge" }, [
-                    _vm._v("3")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("Wishlist")])
-              ]
-            )
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "ml-4" },
-          [
-            _c(
-              "router-link",
-              {
-                staticClass: "btn btn-outline-dark btn-round",
-                attrs: { to: { name: "advertisement-create" } }
-              },
-              [_vm._v("Подать обявление")]
-            )
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _vm._m(2)
+                  _c("p", [_vm._v("Кабинет")])
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "wishlist p-0 ml-4 d-none d-lg-flex" },
+            [
+              _c(
+                "router-link",
+                { attrs: { to: { name: "wishlist" }, title: "Wishlist" } },
+                [
+                  _c("div", { staticClass: "icon" }, [
+                    _c("i", { staticClass: "icon-heart-o" }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "wishlist-count badge" }, [
+                      _vm._v("3")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Wishlist")])
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "ml-4" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "btn btn-outline-dark btn-round",
+                  attrs: { to: { name: "advertisement-create" } }
+                },
+                [_vm._v("Подать обявление")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _vm._m(2)
+        ])
       ])
     ])
   ])
@@ -42678,7 +42682,7 @@ var render = function() {
         _vm._v(" "),
         _c(
           "filter-item-component",
-          { attrs: { items: [{}, {}, {}, {}], widget: 3, cat: "brand" } },
+          { attrs: { items: [{}, {}, {}, {}], widget: 3, cat: "region" } },
           [_vm._v("\n            Regions\n        ")]
         ),
         _vm._v(" "),
@@ -42730,7 +42734,8 @@ var staticRenderFns = [
               attrs: {
                 type: "number",
                 id: "disabledTextInput",
-                placeholder: "от"
+                placeholder: "от",
+                min: "0"
               }
             }),
             _vm._v(" "),
@@ -42741,7 +42746,8 @@ var staticRenderFns = [
               attrs: {
                 type: "number",
                 id: "disabledTextInput",
-                placeholder: "до"
+                placeholder: "до",
+                min: "0"
               }
             })
           ])

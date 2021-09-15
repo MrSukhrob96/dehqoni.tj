@@ -11,9 +11,7 @@
                 <label for="sortby">Sort by:</label>
                 <div class="select-custom">
                     <select name="sortby" id="sortby" class="form-control">
-                        <option value="popularity" selected="selected"
-                            >Most Popular</option
-                        >
+                        <option value="popularity" selected="selected">Most Popular</option>
                         <option value="rating">Most Rated</option>
                         <option value="date">Date</option>
                     </select>
