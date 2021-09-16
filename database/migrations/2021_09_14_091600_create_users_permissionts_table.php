@@ -23,6 +23,7 @@ class CreateUsersPermissiontsTable extends Migration
                 ->constrained()
                 ->onUpdate("cascade")
                 ->onDelete("cascade");
+            $table->softDeletes();
             $table->timestamps();
         });
     }

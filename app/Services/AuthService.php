@@ -8,14 +8,14 @@ use Laravel\Passport\Client;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
-use App\Repositories\Interfaces\UserRepositoryInterface;
+use App\Repositories\UserRepository;
 
 class AuthService implements AuthServiceInterface
 {
 
     public $userRepository;
 
-    public function __construct(UserRepositoryInterface $users)
+    public function __construct(UserRepository $users)
     {
         $this->userRepository = $users;
     }

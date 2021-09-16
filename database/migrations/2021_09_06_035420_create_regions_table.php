@@ -17,6 +17,7 @@ class CreateRegionsTable extends Migration
             $table->id();
             $table->string("region_name");
             $table->string("extra")->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

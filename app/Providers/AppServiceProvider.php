@@ -32,9 +32,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->bind(UserRepositoryInterface::class, function ($app) {
-            return new UserRepository($app->make(User::class));
-        });
         $this->app->bind(AuthServiceInterface::class, function ($app) {
             return new AuthService($app->make(UserRepository::class));
         });

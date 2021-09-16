@@ -33,8 +33,8 @@ Route::apiResource("category/{slug}/products", ProductsController::class)->only(
 Route::post("login", [LoginController::class, "store"]);
 Route::post("register", [RegisterController::class, "store"]);
 
-Route::middleware(['auth:api'])->group(function () {
-    Route::apiResource("category/{slug}/products", ProductsController::class)->only("store", "update", "destroy");
+Route::middleware(['auth:api', 'role:user'])->group(function () {
+    Route::apiResource("category/{category:slug}/products", ProductsController::class)->only("store", "update", "destroy");
 
     Route::apiResource("profile", ProfileController::class);
     Route::apiResource("profile/products", ProductController::class);
@@ -47,7 +47,8 @@ Route::middleware(['auth:api'])->group(function () {
 });
 
 
-Route::middleware(["auth:api"])->group(function () {
+Route::middleware(["auth:api", "role:admin"])->group(function () {
     Route::prefix("admin")->group(function () {
+        
     });
 });
