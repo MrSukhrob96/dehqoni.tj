@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 use App\Models\Category;
 use App\Models\Wishlist;
+use App\Models\SubCategory;
 
 class Product extends Model
 {
@@ -18,6 +19,10 @@ class Product extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function subcategory(){
+        return $this->belongsToMany(Product::class, 'product_sub_category');
     }
 
     public function wishlists()

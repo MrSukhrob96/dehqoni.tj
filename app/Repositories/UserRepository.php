@@ -11,7 +11,8 @@ class UserRepository implements UserRepositoryInterface
 {
     public $users;
 
-    public const USER_DEFAULT_ROLE = 2;
+    public const USER_DEFAULT_ROLE = 3;
+    public const USERS_PAGINATION_LIMIT = 12;
 
     public function __construct(User $users)
     {
@@ -32,14 +33,13 @@ class UserRepository implements UserRepositoryInterface
         return $user;
     }
 
-    public function getOne()
+    public function getOne($id)
     {
-
+        return $this->users->where(["slug", $id])->first();
     }
 
     public function getAll()
     {
-
+        return $this->users->paginate(self::USERS_PAGINATION_LIMIT);
     }
-
 }

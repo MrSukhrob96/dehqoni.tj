@@ -2,18 +2,21 @@
 
 namespace App\Services;
 
+use App\Http\Resources\LoginResource;
 use App\Services\Interfaces\AuthServiceInterface;
-
 use Laravel\Passport\Client;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use App\Repositories\UserRepository;
 
+
 class AuthService implements AuthServiceInterface
 {
 
     public $userRepository;
+
+    public const SUCCESS_SIGNIN = "";
 
     public function __construct(UserRepository $users)
     {
@@ -23,7 +26,25 @@ class AuthService implements AuthServiceInterface
     public function login($request)
     {
         if (Auth::attempt($request->only("email", "password"))) {
-            return $this->refresh($request->input("email"), $request->input("password"));
+
+            $user = Auth::user();
+
+            $token = $user->createToken($request->input("email"))->accessToken;
+
+            return response(
+                LoginResource::collection(
+                    [
+                        "status" => true,
+                        "message" => self::SUCCESS_SIGNIN,
+                        "user" => $user,
+                        "type" => "Bearer",
+                        "access_token" => $token,
+                        "refresh_token" => md5($request->input("email")),
+                        "expires_at" => date("Y-m-d H:i:s")
+                    ]
+                ),
+                200
+            );
         }
     }
 
