@@ -3,13 +3,14 @@
 namespace App\Services;
 
 use App\Http\Resources\LoginResource;
+use App\Http\Resources\UserResource;
 use App\Services\Interfaces\AuthServiceInterface;
 use Laravel\Passport\Client;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use App\Repositories\UserRepository;
-
+use Illuminate\Contracts\Session\Session;
 
 class AuthService implements AuthServiceInterface
 {
@@ -25,34 +26,23 @@ class AuthService implements AuthServiceInterface
 
     public function login($request)
     {
-        if (Auth::attempt($request->only("email", "password"))) {
 
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password], true)) {
             $user = Auth::user();
 
-            $token = $user->createToken($request->input("email"))->accessToken;
+            $token = $user->createToken('token')->accessToken;
 
-            return response(
-                LoginResource::collection(
-                    [
-                        "status" => true,
-                        "message" => self::SUCCESS_SIGNIN,
-                        "user" => $user,
-                        "type" => "Bearer",
-                        "access_token" => $token,
-                        "refresh_token" => md5($request->input("email")),
-                        "expires_at" => date("Y-m-d H:i:s")
-                    ]
-                ),
-                200
-            );
+            return (new UserResource($user, "mytoken"));
         }
+
+        return ["message" => "Can't find this user", "status" => 403];
     }
 
     public function register($request)
     {
         $user = $this->userRepository->create($request);
 
-        return $this->refresh($user->email, $user->password);
+        return $user;
     }
 
 

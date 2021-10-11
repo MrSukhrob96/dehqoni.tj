@@ -15,10 +15,6 @@ class AddCollumnToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string("surname");
-            $table->foreignId("role_id")
-                ->constrained()
-                ->onUpdate("cascade")
-                ->onDelete("cascade");
         });
     }
 

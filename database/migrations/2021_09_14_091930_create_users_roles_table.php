@@ -19,7 +19,7 @@ class CreateUsersRolesTable extends Migration
                 ->constrained()
                 ->onUpdate("cascade")
                 ->onDelete("cascade");
-            $table->foreignId("permission_id")
+            $table->foreignId("role_id")
                 ->constrained()
                 ->onUpdate("cascade")
                 ->onDelete("cascade");

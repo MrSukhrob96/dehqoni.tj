@@ -18,7 +18,7 @@ class LoginResource extends JsonResource
         return array(
             "status" => $this->status,
             "message" => $this->message,
-            "data" => UserResource::collection($this->user),
+            // "data" => (new UserResource($this->user)),
             "token" =>
             [
                 "type" => $this->type,

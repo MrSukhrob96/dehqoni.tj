@@ -27,7 +27,6 @@ class UserRepository implements UserRepositoryInterface
             "email"  => $request->input("email"),
             "phone"  => $request->input("phone"),
             "password"  => Hash::make($request->input("password")),
-            "role_id" => self::USER_DEFAULT_ROLE
         ));
 
         return $user;

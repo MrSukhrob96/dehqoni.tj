@@ -19,7 +19,6 @@ class LoginController extends Controller
 
     public function store(AuthRequest $request)
     {
-        return $this->authService->login($request);
+        return response($this->authService->login($request), 200);
     }
-
 }
